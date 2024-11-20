@@ -5397,9 +5397,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\markmb\\source\\repos\\0) Web Development bootcamp\\Angular Projects\\CNCSapi\\CNCSproject.csproj",
-      "projectName": "CNCSproject",
-      "projectPath": "C:\\Users\\markmb\\source\\repos\\0) Web Development bootcamp\\Angular Projects\\CNCSapi\\CNCSproject.csproj",
+      "projectUniqueName": "C:\\Users\\markmb\\source\\repos\\0) Web Development bootcamp\\Angular Projects\\CNCSapi\\CNCSapi.csproj",
+      "projectName": "CNCSapi",
+      "projectPath": "C:\\Users\\markmb\\source\\repos\\0) Web Development bootcamp\\Angular Projects\\CNCSapi\\CNCSapi.csproj",
       "packagesPath": "C:\\Users\\markmb\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\markmb\\source\\repos\\0) Web Development bootcamp\\Angular Projects\\CNCSapi\\obj\\",
       "projectStyle": "PackageReference",

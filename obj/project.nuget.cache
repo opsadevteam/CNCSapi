@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zYBbgWswfh9YWv9tO2SWp+F/0njmlLGsRhk8JUGXtnuL7afDteHEE3PsTSmp7r7j2wCnYahUcxSOWN4UORUZpg==",
+  "dgSpecHash": "7XrTD1160Eks+hlwMwodfyJLlYPflBwJRK6uJLfJSJOU3C91rqkEgXlF9gLGhCAOuKWjt6I5hjoO9pD2bd0ZLQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\markmb\\source\\repos\\0) Web Development bootcamp\\Angular Projects\\CNCSapi\\CNCSproject.csproj",
+  "projectFilePath": "C:\\Users\\markmb\\source\\repos\\0) Web Development bootcamp\\Angular Projects\\CNCSapi\\CNCSapi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\markmb\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\markmb\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",

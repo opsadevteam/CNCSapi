@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CNCSproject", "CNCSproject.csproj", "{99F5E8F1-7F8A-485E-A691-BAD8E2B364D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CNCSapi", "CNCSapi.csproj", "{99F5E8F1-7F8A-485E-A691-BAD8E2B364D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
