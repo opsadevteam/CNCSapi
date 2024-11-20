@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+using System;
 
-namespace CNCSproject.Models;
+namespace CNCSapi.Dto;
 
-public class UserAccount
+public class UserAccountDto
 {
     public int Id { get; set; }
 
@@ -17,12 +16,6 @@ public class UserAccount
 
     public string? Status { get; set; }
 
-    public string? AddedBy { get; set; }
-
     public DateTime? DateAdded { get; set; }
-
-    public bool? IsDeleted { get; set; }
-
-    public string? LogId { get; set; }
 
 }

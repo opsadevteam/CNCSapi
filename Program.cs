@@ -31,6 +31,7 @@ builder.Services.AddControllers().AddJsonOptions(x =>
                     x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddScoped<ITransaction, TransactionRepository>();
+builder.Services.AddScoped<IUserAccountRepository, UserAccountRepository>();
 
 
 
