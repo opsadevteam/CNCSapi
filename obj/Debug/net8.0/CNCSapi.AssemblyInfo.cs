@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CNCSapi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+986f6190904e1bbb7d37c46c1c78af9e75b5f8bf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3c19b150ff82d0eec961f729685a1f0f78a73ece")]
 [assembly: System.Reflection.AssemblyProductAttribute("CNCSapi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CNCSapi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
