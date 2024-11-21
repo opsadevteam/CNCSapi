@@ -54,10 +54,8 @@ public async Task<IActionResult> AddUserAccountAsync(UserAccountDto userAccountD
 
     await userAccountRepository.AddAsync(userAccount);
 
-    if (await userAccountRepository.SaveAllAsync())
-    {
-        return CreatedAtAction(nameof(GetUserAccountAsync), new { id = userAccount.Id }, null); //I set to null to hide the details in API response
-    }
+    //I set to null to hide the details in API response
+    if (await userAccountRepository.SaveAllAsync()) return CreatedAtAction(nameof(GetUserAccountAsync), new { id = userAccount.Id }, null); 
 
     return StatusCode(StatusCodes.Status500InternalServerError, "Error adding user account.");
 }
@@ -73,10 +71,7 @@ public async Task<IActionResult> AddUserAccountAsync(UserAccountDto userAccountD
 
         if (!isUpdated) return NotFound($"User with ID {id} not found.");
 
-        if (await userAccountRepository.SaveAllAsync())
-        {
-            return NoContent(); // 204 No Content
-        }
+        if (await userAccountRepository.SaveAllAsync()) return NoContent(); // 204 No Content
 
         return StatusCode(StatusCodes.Status500InternalServerError, "Error updating user account.");
     }
@@ -88,10 +83,7 @@ public async Task<IActionResult> AddUserAccountAsync(UserAccountDto userAccountD
 
         if (!isDeleted) return NotFound($"User with ID {id} not found.");
 
-        if (await userAccountRepository.SaveAllAsync())
-        {
-            return NoContent(); // 204 No Content
-        }
+        if (await userAccountRepository.SaveAllAsync()) return NoContent(); // 204 No Content
 
         return StatusCode(StatusCodes.Status500InternalServerError, "Error deleting user account.");
     }
