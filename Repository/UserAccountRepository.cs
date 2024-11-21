@@ -33,22 +33,22 @@ public class UserAccountRepository(CncssystemContext context, IMapper mapper) : 
     }
 
      public async Task<bool> UpdateAsync(UserAccount userAccount)
-    {
-        var user = await context.tblUserAccount.FindAsync(userAccount.Id);
-        
-        if (user is null) return false;
+        {
+            var user = await context.tblUserAccount.FindAsync(userAccount.Id);
+            
+            if (user is null) return false;
 
-        user.FullName = userAccount.FullName;
-        user.Username = userAccount.Username;
-        user.Password = userAccount.Password;
-        user.UserGroup = userAccount.UserGroup;
-        user.Status = userAccount.Status;
-        user.DateAdded = userAccount.DateAdded;
+            user.FullName = userAccount.FullName;
+            user.Username = userAccount.Username;
+            user.Password = userAccount.Password;
+            user.UserGroup = userAccount.UserGroup;
+            user.Status = userAccount.Status;
+            user.DateAdded = userAccount.DateAdded;
 
-        context.Entry(user).State = EntityState.Modified;
+            context.Entry(user).State = EntityState.Modified;
 
-        return true;
-    }
+            return true;
+        }
 
     public async Task<bool> DeleteAsync(int id)
     {

@@ -34,21 +34,35 @@ public class UserAccountController(IUserAccountRepository userAccountRepository)
     }
 
     [HttpPost]
-    public async Task<IActionResult> AddUserAccountAsync(UserAccount userAccount)
+public async Task<IActionResult> AddUserAccountAsync(UserAccountDto userAccountDto)
+{
+    if (userAccountDto is null) return BadRequest("Invalid user account data.");
+
+    // Map the DTO to the entity and save it
+    var userAccount = new UserAccount
     {
-        if (userAccount is null) return BadRequest("Invalid user account data.");
+        FullName = userAccountDto.FullName,
+        Username = userAccountDto.Username,
+        Password = userAccountDto.Password,
+        UserGroup = userAccountDto.UserGroup,
+        Status = userAccountDto.Status,
+        DateAdded = DateTime.UtcNow,  // Set the current date
+        AddedBy = userAccountDto.AddedBy, 
+        IsDeleted = false,
+        LogId = $"JXF{userAccountDto.Username}"
+    };
 
-        await userAccountRepository.AddAsync(userAccount); 
+    await userAccountRepository.AddAsync(userAccount);
 
-        if (await userAccountRepository.SaveAllAsync())
-        {
-            return CreatedAtAction(nameof(GetUserAccountAsync), new { id = userAccount.Id }, userAccount);
-            //dotnet have bugs when i put the async keyword.
-            // return CreatedAtAction("GetUserAccount", new { id = userAccount.Id }, userAccount);
-        }
-
-        return StatusCode(StatusCodes.Status500InternalServerError, "Error adding user account.");
+    if (await userAccountRepository.SaveAllAsync())
+    {
+        return CreatedAtAction(nameof(GetUserAccountAsync), new { id = userAccount.Id }, null); //I set to null to hide the details in API response
     }
+
+    return StatusCode(StatusCodes.Status500InternalServerError, "Error adding user account.");
+}
+
+
 
     [HttpPut("{id}")]
     public async Task<IActionResult> UpdateUserAccountAsync(int id, UserAccount userAccount)

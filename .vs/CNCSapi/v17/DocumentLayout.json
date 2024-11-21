@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\markmb\\source\\repos\\0) Web Development bootcamp\\Angular Projects\\CNCSapi\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{99F5E8F1-7F8A-485E-A691-BAD8E2B364D9}|CNCSapi.csproj|c:\\users\\markmb\\source\\repos\\0) web development bootcamp\\angular projects\\cncsapi\\dto\\useraccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99F5E8F1-7F8A-485E-A691-BAD8E2B364D9}|CNCSapi.csproj|solutionrelative:dto\\useraccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{99F5E8F1-7F8A-485E-A691-BAD8E2B364D9}|CNCSapi.csproj|c:\\users\\markmb\\source\\repos\\0) web development bootcamp\\angular projects\\cncsapi\\controllers\\useraccountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{99F5E8F1-7F8A-485E-A691-BAD8E2B364D9}|CNCSapi.csproj|solutionrelative:controllers\\useraccountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -87,12 +91,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "UserAccountDto.cs",
+              "DocumentMoniker": "C:\\Users\\markmb\\source\\repos\\0) Web Development bootcamp\\Angular Projects\\CNCSapi\\Dto\\UserAccountDto.cs",
+              "RelativeDocumentMoniker": "Dto\\UserAccountDto.cs",
+              "ToolTip": "C:\\Users\\markmb\\source\\repos\\0) Web Development bootcamp\\Angular Projects\\CNCSapi\\Dto\\UserAccountDto.cs",
+              "RelativeToolTip": "Dto\\UserAccountDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T07:34:34.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "UserAccountController.cs",
               "DocumentMoniker": "C:\\Users\\markmb\\source\\repos\\0) Web Development bootcamp\\Angular Projects\\CNCSapi\\Controllers\\UserAccountController.cs",
               "RelativeDocumentMoniker": "Controllers\\UserAccountController.cs",
               "ToolTip": "C:\\Users\\markmb\\source\\repos\\0) Web Development bootcamp\\Angular Projects\\CNCSapi\\Controllers\\UserAccountController.cs",
               "RelativeToolTip": "Controllers\\UserAccountController.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAACEAAAAAAAAA",
+              "ViewState": "AQIAABMAAAAAAAAAAAAgwC4AAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-20T07:36:45.462Z",
               "EditorCaption": ""
