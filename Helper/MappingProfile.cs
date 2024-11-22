@@ -14,7 +14,7 @@ namespace CNCSproject.Helper
             CreateMap<Transactions, TransactionDto>();
             CreateMap<TransactionDto, Transactions>();
             CreateMap<UserAccount, UserAccountDto>();
-            CreateMap<UserAccount, UpsertUserAccountDto>();
+            CreateMap<UserAccount, UpdateUserAccountDto>();
         }
     }
 }
