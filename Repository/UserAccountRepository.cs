@@ -65,4 +65,9 @@ public class UserAccountRepository(CncssystemContext context, IMapper mapper) : 
     {
         return await context.SaveChangesAsync() > 0;
     }
+
+    public async Task<bool> IsUserExistsAsync(string Username)
+    {
+        return await context.tblUserAccount.AnyAsync(x => x.Username.ToLower() == Username.ToLower());
+    }
 }

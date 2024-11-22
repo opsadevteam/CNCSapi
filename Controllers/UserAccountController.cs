@@ -38,6 +38,8 @@ public async Task<IActionResult> AddUserAccountAsync(UserAccountDto userAccountD
 {
     if (userAccountDto is null) return BadRequest("Invalid user account data.");
 
+    if(await userAccountRepository.IsUserExistsAsync(userAccountDto.Username)) return BadRequest("Username is taken");
+
     // Map the DTO to the entity and save it
     var userAccount = new UserAccount
     {
