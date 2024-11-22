@@ -23,7 +23,7 @@ public partial class CncssystemContext : DbContext
 
     public virtual DbSet<Transactions> Transactions { get; set; }
 
-    public virtual DbSet<UserAccount> UserAccount { get; set; }
+    public virtual DbSet<UserAccount> tblUserAccount { get; set; }
   
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

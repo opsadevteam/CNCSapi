@@ -1,21 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace CNCSproject.Models;
 
-public partial class UserAccount
+public class UserAccount
 {
     public int Id { get; set; }
 
-    public string? FullName { get; set; }
+    [Required]
+    public required string FullName { get; set; }
 
-    public string? Username { get; set; }
+    [Required]
+    public required string Username { get; set; }
 
-    public string? Password { get; set; }
+    [Required]
+    public required string Password { get; set; }
 
-    public string? UserGroup { get; set; }
+    [Required]
+    public required string UserGroup { get; set; }
 
-    public string? Status { get; set; }
+    [Required]
+    public required string? Status { get; set; }
 
     public string? AddedBy { get; set; }
 
@@ -24,4 +30,5 @@ public partial class UserAccount
     public bool? IsDeleted { get; set; }
 
     public string? LogId { get; set; }
+
 }

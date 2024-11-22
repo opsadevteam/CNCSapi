@@ -1,12 +1,11 @@
 {
   "Version": 1,
-  "Hash": "zldhfd/BOn6sNs+5Q/NYJCnrLwucBsZDIlQaK9y3l58=",
-  "Source": "CNCSproject",
-  "BasePath": "_content/CNCSproject",
+  "Hash": "1/th28SG+8nkA1pUuUgMoRYhf9lc4CWqQnIQSnd+2S8=",
+  "Source": "CNCSapi",
+  "BasePath": "_content/CNCSapi",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "Assets": []
 }
