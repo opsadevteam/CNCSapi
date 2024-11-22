@@ -3,35 +3,31 @@
   "WorkspaceRootPath": "C:\\Users\\Core i7 7th Gen\\source\\repos\\00 Real Projects\\CNCSapi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{99F5E8F1-7F8A-485E-A691-BAD8E2B364D9}|CNCSapi.csproj|c:\\users\\core i7 7th gen\\source\\repos\\00 real projects\\cncsapi\\controllers\\useraccountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99F5E8F1-7F8A-485E-A691-BAD8E2B364D9}|CNCSapi.csproj|solutionrelative:controllers\\useraccountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99F5E8F1-7F8A-485E-A691-BAD8E2B364D9}|CNCSapi.csproj|c:\\users\\core i7 7th gen\\source\\repos\\00 real projects\\cncsapi\\repository\\useraccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99F5E8F1-7F8A-485E-A691-BAD8E2B364D9}|CNCSapi.csproj|solutionrelative:repository\\useraccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99F5E8F1-7F8A-485E-A691-BAD8E2B364D9}|CNCSapi.csproj|c:\\users\\core i7 7th gen\\source\\repos\\00 real projects\\cncsapi\\repository\\transactionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99F5E8F1-7F8A-485E-A691-BAD8E2B364D9}|CNCSapi.csproj|solutionrelative:repository\\transactionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{99F5E8F1-7F8A-485E-A691-BAD8E2B364D9}|CNCSapi.csproj|c:\\users\\core i7 7th gen\\source\\repos\\00 real projects\\cncsapi\\interface\\iuseraccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{99F5E8F1-7F8A-485E-A691-BAD8E2B364D9}|CNCSapi.csproj|solutionrelative:interface\\iuseraccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{99F5E8F1-7F8A-485E-A691-BAD8E2B364D9}|CNCSapi.csproj|c:\\users\\core i7 7th gen\\source\\repos\\00 real projects\\cncsapi\\models\\transactions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{99F5E8F1-7F8A-485E-A691-BAD8E2B364D9}|CNCSapi.csproj|C:\\Users\\Core i7 7th Gen\\source\\repos\\00 Real Projects\\CNCSapi\\controllers\\useraccountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99F5E8F1-7F8A-485E-A691-BAD8E2B364D9}|CNCSapi.csproj|solutionrelative:controllers\\useraccountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99F5E8F1-7F8A-485E-A691-BAD8E2B364D9}|CNCSapi.csproj|C:\\Users\\Core i7 7th Gen\\source\\repos\\00 Real Projects\\CNCSapi\\repository\\transactionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99F5E8F1-7F8A-485E-A691-BAD8E2B364D9}|CNCSapi.csproj|solutionrelative:repository\\transactionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99F5E8F1-7F8A-485E-A691-BAD8E2B364D9}|CNCSapi.csproj|C:\\Users\\Core i7 7th Gen\\source\\repos\\00 Real Projects\\CNCSapi\\models\\transactions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{99F5E8F1-7F8A-485E-A691-BAD8E2B364D9}|CNCSapi.csproj|solutionrelative:models\\transactions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{99F5E8F1-7F8A-485E-A691-BAD8E2B364D9}|CNCSapi.csproj|c:\\users\\core i7 7th gen\\source\\repos\\00 real projects\\cncsapi\\dto\\transactiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{99F5E8F1-7F8A-485E-A691-BAD8E2B364D9}|CNCSapi.csproj|C:\\Users\\Core i7 7th Gen\\source\\repos\\00 Real Projects\\CNCSapi\\dto\\transactiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{99F5E8F1-7F8A-485E-A691-BAD8E2B364D9}|CNCSapi.csproj|solutionrelative:dto\\transactiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{99F5E8F1-7F8A-485E-A691-BAD8E2B364D9}|CNCSapi.csproj|c:\\users\\core i7 7th gen\\source\\repos\\00 real projects\\cncsapi\\dto\\useraccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{99F5E8F1-7F8A-485E-A691-BAD8E2B364D9}|CNCSapi.csproj|C:\\Users\\Core i7 7th Gen\\source\\repos\\00 Real Projects\\CNCSapi\\dto\\useraccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{99F5E8F1-7F8A-485E-A691-BAD8E2B364D9}|CNCSapi.csproj|solutionrelative:dto\\useraccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{99F5E8F1-7F8A-485E-A691-BAD8E2B364D9}|CNCSapi.csproj|c:\\users\\core i7 7th gen\\source\\repos\\00 real projects\\cncsapi\\models\\useraccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{99F5E8F1-7F8A-485E-A691-BAD8E2B364D9}|CNCSapi.csproj|C:\\Users\\Core i7 7th Gen\\source\\repos\\00 Real Projects\\CNCSapi\\models\\useraccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{99F5E8F1-7F8A-485E-A691-BAD8E2B364D9}|CNCSapi.csproj|solutionrelative:models\\useraccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -42,12 +38,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -63,7 +55,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Transactions.cs",
               "DocumentMoniker": "C:\\Users\\Core i7 7th Gen\\source\\repos\\00 Real Projects\\CNCSapi\\Models\\Transactions.cs",
               "RelativeDocumentMoniker": "Models\\Transactions.cs",
@@ -71,12 +63,11 @@
               "RelativeToolTip": "Models\\Transactions.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T14:55:50.065Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-22T14:55:50.065Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "TransactionDto.cs",
               "DocumentMoniker": "C:\\Users\\Core i7 7th Gen\\source\\repos\\00 Real Projects\\CNCSapi\\Dto\\TransactionDto.cs",
               "RelativeDocumentMoniker": "Dto\\TransactionDto.cs",
@@ -84,12 +75,11 @@
               "RelativeToolTip": "Dto\\TransactionDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T14:54:20.632Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-22T14:54:20.632Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "UserAccount.cs",
               "DocumentMoniker": "C:\\Users\\Core i7 7th Gen\\source\\repos\\00 Real Projects\\CNCSapi\\Models\\UserAccount.cs",
               "RelativeDocumentMoniker": "Models\\UserAccount.cs",
@@ -97,12 +87,11 @@
               "RelativeToolTip": "Models\\UserAccount.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T14:37:25.763Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-22T14:37:25.763Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "UserAccountController.cs",
               "DocumentMoniker": "C:\\Users\\Core i7 7th Gen\\source\\repos\\00 Real Projects\\CNCSapi\\Controllers\\UserAccountController.cs",
               "RelativeDocumentMoniker": "Controllers\\UserAccountController.cs",
@@ -110,12 +99,11 @@
               "RelativeToolTip": "Controllers\\UserAccountController.cs",
               "ViewState": "AQIAABIAAAAAAAAAAAAqwD8AAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T14:11:23.012Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-22T14:11:23.012Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "UserAccountDto.cs",
               "DocumentMoniker": "C:\\Users\\Core i7 7th Gen\\source\\repos\\00 Real Projects\\CNCSapi\\Dto\\UserAccountDto.cs",
               "RelativeDocumentMoniker": "Dto\\UserAccountDto.cs",
@@ -123,54 +111,19 @@
               "RelativeToolTip": "Dto\\UserAccountDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T14:10:18.95Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-22T14:10:18.95Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "IUserAccountRepository.cs",
               "DocumentMoniker": "C:\\Users\\Core i7 7th Gen\\source\\repos\\00 Real Projects\\CNCSapi\\Interface\\IUserAccountRepository.cs",
               "RelativeDocumentMoniker": "Interface\\IUserAccountRepository.cs",
               "ToolTip": "C:\\Users\\Core i7 7th Gen\\source\\repos\\00 Real Projects\\CNCSapi\\Interface\\IUserAccountRepository.cs",
               "RelativeToolTip": "Interface\\IUserAccountRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAhAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-22T15:16:36.67Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "f395f5de-3de1-4333-a914-df874f053d91",
-        "Display": 1,
-        "X": -64,
-        "Y": 499,
-        "Width": 1553,
-        "Height": 957,
-        "WindowState": 0
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserAccountRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Core i7 7th Gen\\source\\repos\\00 Real Projects\\CNCSapi\\Repository\\UserAccountRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\UserAccountRepository.cs",
-              "ToolTip": "C:\\Users\\Core i7 7th Gen\\source\\repos\\00 Real Projects\\CNCSapi\\Repository\\UserAccountRepository.cs",
-              "RelativeToolTip": "Repository\\UserAccountRepository.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABcAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T14:13:44.309Z",
               "EditorCaption": ""
             }
           ]
