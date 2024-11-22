@@ -3,6 +3,7 @@ using CNCSapi.Dto;
 using CNCSproject.Dto;
 using CNCSproject.Interface;
 using CNCSproject.Models;
+using CNCSproject.Repository;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,84 +11,63 @@ namespace CNCSproject.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class UserAccountController(IUserAccountRepository userAccountRepository) : ControllerBase
+public class UserAccountController(IUserAccountRepository _userAccountRepository, IMapper mapper) : ControllerBase
 {
     [HttpGet]
     public async Task<ActionResult<IEnumerable<UserAccountDto>>> GetUserAccountsAsync()
     {
-        var users = await userAccountRepository.GetAllAsync();
+        var users = await _userAccountRepository.GetAllAsync();
 
-        if (!users.Any()) return NotFound("Not found.");
-
-        return Ok(users);
+        return users.Any() ?
+            Ok(users) :
+            NotFound("No user accounts found.");
     }
 
-    [HttpGet("{id}")]
-    [ActionName(nameof(GetUserAccountAsync))] //this code resolve the issue of CreatedAtAction when putting "Async" word in its parameter
     public async Task<ActionResult<UserAccountDto>> GetUserAccountAsync(int id)
     {
-        var user = await userAccountRepository.GetAsync(id); 
+        var user = await _userAccountRepository.GetAsync(id);
 
-        if (user is null) return NotFound("Not found."); 
-
-        return user; 
+        return user is not null ?
+            Ok(user) :
+            NotFound($"User with ID {id} not found.");
     }
 
     [HttpPost]
-public async Task<IActionResult> AddUserAccountAsync(UserAccountDto userAccountDto)
-{
-    if (userAccountDto is null) return BadRequest("Invalid user account data.");
-
-    if(await userAccountRepository.IsUserExistsAsync(userAccountDto.Username)) return BadRequest("Username is taken");
-
-    // Map the DTO to the entity and save it
-    var userAccount = new UserAccount
+    public async Task<IActionResult> AddUserAccountAsync(UserAccount newUser)
     {
-        FullName = userAccountDto.FullName,
-        Username = userAccountDto.Username,
-        Password = userAccountDto.Password,
-        UserGroup = userAccountDto.UserGroup,
-        Status = userAccountDto.Status,
-        DateAdded = DateTime.UtcNow,  // Set the current date
-        AddedBy = userAccountDto.AddedBy, 
-        IsDeleted = false,
-        LogId = $"JXF{userAccountDto.Username}"
-    };
+        if (newUser is null) 
+            return BadRequest("Invalid user account data.");
 
-    await userAccountRepository.AddAsync(userAccount);
+        if (await _userAccountRepository.IsUserExistsAsync(newUser.Username))
+            return BadRequest("Username is already taken.");
 
-    //I set to null to hide the details in API response
-    if (await userAccountRepository.SaveAllAsync()) return CreatedAtAction(nameof(GetUserAccountAsync), new { id = userAccount.Id }, null); 
-
-    return StatusCode(StatusCodes.Status500InternalServerError, "Error adding user account.");
-}
-
+        var isAdded = await _userAccountRepository.AddAsync(newUser);
+        return isAdded ?
+            NoContent() :
+            StatusCode(StatusCodes.Status500InternalServerError, "Error adding user account.");
+    }
 
 
     [HttpPut("{id}")]
-    public async Task<IActionResult> UpdateUserAccountAsync(int id, UserAccount userAccount)
+    public async Task<IActionResult> UpdateUserAccountAsync(int id, [FromBody] UserAccountDto userAccountDto)
     {
-        if (id != userAccount.Id) return BadRequest("User ID mismatch.");
+        if (id != userAccountDto.Id)
+            return BadRequest("User ID mismatch.");
 
-        var isUpdated = await userAccountRepository.UpdateAsync(userAccount);
+        var isUpdated = await _userAccountRepository.UpdateAsync(mapper.Map<UserAccount>(userAccountDto));
 
-        if (!isUpdated) return NotFound($"User with ID {id} not found.");
-
-        if (await userAccountRepository.SaveAllAsync()) return NoContent(); // 204 No Content
-
-        return StatusCode(StatusCodes.Status500InternalServerError, "Error updating user account.");
+        return isUpdated ?
+            NoContent() : 
+            NotFound($"User with ID {id} not found.");
     }
 
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteUserAccountAsync(int id)
     {
-        var isDeleted = await userAccountRepository.DeleteAsync(id);
-
-        if (!isDeleted) return NotFound($"User with ID {id} not found.");
-
-        if (await userAccountRepository.SaveAllAsync()) return NoContent(); // 204 No Content
-
-        return StatusCode(StatusCodes.Status500InternalServerError, "Error deleting user account.");
+        var isDeleted = await _userAccountRepository.DeleteAsync(id);
+        return isDeleted
+            ? NoContent()
+            : NotFound($"User with ID {id} not found.");
     }
     
  }

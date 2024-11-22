@@ -27,47 +27,35 @@ public class UserAccountRepository(CncssystemContext context, IMapper mapper) : 
         .SingleOrDefaultAsync();
     }
 
-    public async Task AddAsync(UserAccount userAccount)
+    public async Task<bool> AddAsync(UserAccount userAccount)
     {
         await context.tblUserAccount.AddAsync(userAccount);
+        return await  SaveAllAsync();
     }
 
      public async Task<bool> UpdateAsync(UserAccount userAccount)
-        {
-            var user = await context.tblUserAccount.FindAsync(userAccount.Id);
-            
-            if (user is null) return false;
-
-            user.FullName = userAccount.FullName;
-            user.Username = userAccount.Username;
-            user.Password = userAccount.Password;
-            user.UserGroup = userAccount.UserGroup;
-            user.Status = userAccount.Status;
-            user.DateAdded = userAccount.DateAdded;
-
-            context.Entry(user).State = EntityState.Modified;
-
-            return true;
-        }
+    {
+        context.tblUserAccount.Update(userAccount);
+        return await SaveAllAsync();
+    }
 
     public async Task<bool> DeleteAsync(int id)
     {
-        var userAccount = await context.tblUserAccount.FindAsync(id);
-        
-        if (userAccount is null) return false;
+        var deleted = await context.tblUserAccount
+            .Where(a => a.Id == id)
+            .ExecuteUpdateAsync(x => x.SetProperty(x => x.IsDeleted, true));
 
-        context.tblUserAccount.Remove(userAccount);
+        return deleted > 0;
+    }
 
-        return true;
+    public async Task<bool> IsUserExistsAsync(string Username)
+    {
+        return await context.tblUserAccount
+            .AnyAsync(x => x.Username.ToLower() == Username.ToLower());
     }
 
     public async Task<bool> SaveAllAsync()
     {
         return await context.SaveChangesAsync() > 0;
-    }
-
-    public async Task<bool> IsUserExistsAsync(string Username)
-    {
-        return await context.tblUserAccount.AnyAsync(x => x.Username.ToLower() == Username.ToLower());
     }
 }
