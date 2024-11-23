@@ -11,7 +11,7 @@ namespace CNCSproject.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class UserAccountController(IUserAccountRepository _userAccountRepository, IMapper mapper) : ControllerBase
+public class UserAccountController(IUserAccountRepository _userAccountRepository) : ControllerBase
 {
     [HttpGet]
     public async Task<ActionResult<IEnumerable<UserAccountDto>>> GetUserAccountsAsync()
@@ -58,7 +58,7 @@ public class UserAccountController(IUserAccountRepository _userAccountRepository
         if (await _userAccountRepository.IsUserExistsAsync(userAccount.Username))
             return Conflict("Username is already taken.");
 
-        var isUpdated = await _userAccountRepository.UpdateAsync(mapper.Map<UserAccount>(userAccount));
+        var isUpdated = await _userAccountRepository.UpdateAsync(userAccount);
 
         return isUpdated ?
             NoContent() : 
