@@ -15,6 +15,7 @@ public class UserAccountRepository(CncssystemContext context, IMapper mapper) : 
     public async Task<IEnumerable<UserAccountDto>> GetAllAsync()
     {
         return await context.tblUserAccount
+        .Where(user => user.IsDeleted == false)
         .ProjectTo<UserAccountDto>(mapper.ConfigurationProvider)
         .ToListAsync();
     }
@@ -51,7 +52,7 @@ public class UserAccountRepository(CncssystemContext context, IMapper mapper) : 
     public async Task<bool> IsUserExistsAsync(string Username)
     {
         return await context.tblUserAccount
-            .AnyAsync(x => x.Username.ToLower() == Username.ToLower());
+            .AnyAsync(x => x.Username.ToLower() == Username.ToLower() && x.IsDeleted == false);
     }
 
     public async Task<bool> SaveAllAsync()
