@@ -23,7 +23,7 @@ public class UserAccountController(IUserAccountRepository _userAccountRepository
             NotFound("No user accounts found.");
     }
 
-    [HttpGet]
+    [HttpGet("{id}")]
     public async Task<ActionResult<UserAccountDto>> GetUserAccountAsync(int id)
     {
         var user = await _userAccountRepository.GetAsync(id);
