@@ -11,7 +11,7 @@ namespace CNCSproject.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class UserAccountController(IUserAccountRepository _userAccountRepository) : ControllerBase
+public class UserAccountController(IUserAccountRepository _userAccountRepository, IMapper mapper) : ControllerBase
 {
     [HttpGet]
     public async Task<ActionResult<IEnumerable<UserAccountDto>>> GetUserAccountsAsync()
@@ -49,18 +49,18 @@ public class UserAccountController(IUserAccountRepository _userAccountRepository
     }
 
 
-    // [HttpPut("{id}")]
-    // public async Task<IActionResult> UpdateUserAccountAsync(int id, [FromBody] UserAccountDto userAccountDto)
-    // {
-    //     if (id != userAccountDto.Id)
-    //         return BadRequest("User ID mismatch.");
+    [HttpPut("{id}")]
+    public async Task<IActionResult> UpdateUserAccountAsync(int id, [FromBody] UserAccount userAccount)
+    {
+        if (id != userAccount.Id)
+            return BadRequest("User ID mismatch.");
 
-    //     var isUpdated = await _userAccountRepository.UpdateAsync(mapper.Map<UserAccount>(userAccountDto));
+        var isUpdated = await _userAccountRepository.UpdateAsync(mapper.Map<UserAccount>(userAccount));
 
-    //     return isUpdated ?
-    //         NoContent() : 
-    //         NotFound($"User with ID {id} not found.");
-    // }
+        return isUpdated ?
+            NoContent() : 
+            NotFound($"User with ID {id} not found.");
+    }
 
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteUserAccountAsync(int id)

@@ -55,6 +55,7 @@ public class UserAccountRepository(CncssystemContext context, IMapper mapper) : 
             .AnyAsync(x => x.Username.ToLower() == Username.ToLower() && x.IsDeleted == false);
     }
 
+
     public async Task<bool> SaveAllAsync()
     {
         return await context.SaveChangesAsync() > 0;
