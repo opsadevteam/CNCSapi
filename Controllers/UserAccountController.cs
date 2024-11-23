@@ -40,7 +40,7 @@ public class UserAccountController(IUserAccountRepository _userAccountRepository
             return BadRequest("Invalid user account data.");
 
         if (await _userAccountRepository.IsUserExistsAsync(newUser.Username))
-            return BadRequest("Username is already taken.");
+            return Conflict("Username is already taken.");
 
         var isAdded = await _userAccountRepository.AddAsync(newUser);
         return isAdded ?
@@ -50,10 +50,13 @@ public class UserAccountController(IUserAccountRepository _userAccountRepository
 
 
     [HttpPut("{id}")]
-    public async Task<IActionResult> UpdateUserAccountAsync(int id, [FromBody] UserAccount userAccount)
+    public async Task<IActionResult> UpdateUserAccountAsync(int id, UserAccount userAccount)
     {
         if (id != userAccount.Id)
             return BadRequest("User ID mismatch.");
+
+        if (await _userAccountRepository.IsUserExistsAsync(userAccount.Username))
+            return Conflict("Username is already taken.");
 
         var isUpdated = await _userAccountRepository.UpdateAsync(mapper.Map<UserAccount>(userAccount));
 
