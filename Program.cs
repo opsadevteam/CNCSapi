@@ -1,4 +1,6 @@
 using System.Text.Json.Serialization;
+using CNCSapi.Interface;
+using CNCSapi.Repository;
 using CNCSproject.Interface;
 using CNCSproject.Models;
 using CNCSproject.Repository;
@@ -32,6 +34,7 @@ builder.Services.AddControllers().AddJsonOptions(x =>
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddScoped<ITransaction, TransactionRepository>();
 builder.Services.AddScoped<IUserAccountRepository, UserAccountRepository>();
+builder.Services.AddScoped<IActivityLogRepository, ActivityLogRepository>();
 
 
 
